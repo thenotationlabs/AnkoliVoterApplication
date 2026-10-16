@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff9933">
+  <title>अंकोली मतदार शोध</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-stripe" aria-hidden="true"><span></span><span></span><span></span></div>
+  <header class="site-header">
+    <div class="brand-mark" aria-hidden="true">अं</div>
+    <div>
+      <p class="eyebrow">अंकोली ग्रामपंचायत निवडणूक २०२६</p>
+      <h1>मतदार माहिती शोध</h1>
+      <p class="subtitle">आपली माहिती सहज शोधा</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="campaign-section" aria-label="निवडणूक जनजागृती संदेश">
+      <div class="section-heading">
+        <span class="heading-icon" aria-hidden="true">✦</span>
+        <div><h2>जनजागृती संदेश</h2><p>अंकोलीसाठीचे संदेश</p></div>
+      </div>
+      <div class="campaign-grid">
+        <figure class="campaign-card"><img src="assets/campaign-1.jpeg" alt="अंकोली ग्रामपंचायत निवडणूक २०२६ जनजागृती संदेश १" loading="lazy"></figure>
+        <figure class="campaign-card"><img src="assets/campaign-2.jpeg" alt="अंकोली ग्रामपंचायत निवडणूक २०२६ जनजागृती संदेश २" loading="lazy"></figure>
+        <figure class="campaign-card"><img src="assets/campaign-3.jpeg" alt="अंकोली ग्रामपंचायत निवडणूक २०२६ जनजागृती संदेश ३" loading="lazy"></figure>
+        <figure class="campaign-card"><img src="assets/campaign-4.jpeg" alt="अंकोली ग्रामपंचायत निवडणूक २०२६ जनजागृती संदेश ४" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="search-section" aria-labelledby="search-title">
+      <div class="section-heading">
+        <span class="heading-icon search-icon" aria-hidden="true">⌕</span>
+        <div><h2 id="search-title">मतदार शोधा</h2><p>मतदाराचे पूर्ण नाव किंवा नावाचा काही भाग टाका</p></div>
+      </div>
+      <form id="searchForm" class="search-form" novalidate>
+        <label class="sr-only" for="searchInput">मतदाराचे नाव</label>
+        <div class="input-wrap"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="उदा. पवार" autocomplete="off" maxlength="100"></div>
+        <button type="submit" id="searchButton"><span class="button-label">शोधा</span><span aria-hidden="true"> →</span></button>
+      </form>
+      <p id="formMessage" class="form-message" role="status" aria-live="polite">शोधण्यासाठी किमान ३ अक्षरे टाका.</p>
+      <div id="resultsSummary" class="results-summary" hidden></div>
+      <div id="resultsList" class="results-list"></div>
+    </section>
+  </main>
+
+  <footer><div class="footer-tricolor"><span></span><span></span><span></span></div><p>अंकोली मतदार माहिती पोर्टल</p><small>🌍Made on Earth by Humans</small></footer>
+  
+    <footer><div class="footer-tricolor"><small>🌍Made on Earth by Humans</small></div></footer>
+
+  <div id="voterModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel">
+      <button class="close-modal" id="closeModal" aria-label="बंद करा">×</button>
+      <div class="modal-heading"><span class="mini-tricolor"><i></i><i></i><i></i></span><div><h2 id="modalTitle">मतदार माहिती कार्ड</h2><p>अंकोली ग्रामपंचायत निवडणूक २०२६</p></div></div>
+      <div id="voterCard" class="voter-card">
+        <div class="card-band"></div>
+        <div class="card-content">
+          <div class="card-topline"><span class="card-emblem">अं</span><div><strong>मतदार माहिती</strong><small>अंकोली ग्रामपंचायत</small></div><span class="card-tag">मतदार तपशील</span></div>
+          <div class="card-divider"></div>
+          <h3 id="cardName">—</h3>
+          <p class="card-parent"><span id="parentLabel">वडील / पतीचे नाव</span>: <strong id="cardParent">—</strong></p>
+          <div class="card-fields">
+            <div><small>मतदार ओळखपत्र क्रमांक</small><strong id="cardEpic">—</strong></div>
+            <div><small>मतदार अनुक्रमांक</small><strong id="cardSerial">—</strong></div>
+            <div><small>वॉर्ड</small><strong id="cardWard">—</strong></div>
+            <div><small>भाग क्रमांक</small><strong id="cardPart">—</strong></div>
+            <div class="wide"><small>मतदान केंद्र / विभाग</small><strong id="cardBooth">—</strong></div>
+            <div class="wide"><small>पत्ता</small><strong id="cardAddress">—</strong></div>
+          </div>
+          <p class="card-disclaimer">हे या पोर्टलवरील माहितीचे डिजिटल सारांश कार्ड आहे. अधिकृत मतदार ओळखपत्र नाही.</p>
+        </div>
+        <div class="card-bottom-band"></div>
+      </div>
+      <div class="modal-actions">
+        <button id="shareButton" class="share-button"><span aria-hidden="true">↗</span> WhatsApp वर शेअर करा</button>
+        <button id="downloadButton" class="download-button"><span aria-hidden="true">↓</span> कार्ड डाउनलोड करा</button>
+      </div>
+      <p id="modalMessage" class="modal-message" role="status"></p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
